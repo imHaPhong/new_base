@@ -1,22 +1,22 @@
 import { lazy } from "react";
 
 import { loadable } from "src/components";
-import { routeHomeBase, routeSigninBase, routeSignupBase } from "./constants/routes";
+import { routeCalculator, routeQuote, routeTodoList } from "./constants/routes";
 
 export const routesConfig = [
   {
-    path: routeHomeBase,
+    path: routeCalculator,
     exact: true,
-    component: loadable(lazy(() => import("./pages/index"))),
+    component: loadable(lazy(() => import("./pages/calculator"))),
   },
   {
-    path: routeSigninBase,
+    path: routeTodoList,
     exact: true,
-    component: loadable(lazy(() => import("./pages/signin"))),
+    component: loadable(lazy(() => import("./pages/todolist"))),
   },
   {
-    path: routeSignupBase,
+    path: routeQuote,
     exact: true,
-    component: loadable(lazy(() => import("./pages/signup"))),
+    component: loadable(lazy(() => import("./pages/quotes"))),
   },
 ];
